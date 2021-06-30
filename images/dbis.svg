@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400px" height="450px" viewBox="0 0 1400 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>dbis@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#222222" offset="0%"></stop>
+            <stop stop-color="#F3F3F3" offset="78.1065245%"></stop>
+            <stop stop-color="#FFFFFF" offset="90.9997889%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="dbis" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#000000" x="0" y="0" width="1400" height="450"></rect>
+        <g id="Group" transform="translate(71.000000, 61.000000)">
+            <text id="DBIS" font-family="STHeitiSC-Light, Heiti SC" font-size="400" font-weight="300" letter-spacing="-10.1196667" fill="#FFFFFF">
+                <tspan x="482.678667" y="344">DBIS</tspan>
+            </text>
+            <g id="Group-2" transform="translate(200.500000, 171.500000) scale(1, -1) translate(-200.500000, -171.500000) translate(0.000000, 15.000000)" fill="url(#linearGradient-1)">
+                <ellipse id="Oval" transform="translate(200.500000, 51.000000) scale(1, -1) translate(-200.500000, -51.000000) " cx="200.5" cy="51" rx="200.5" ry="51"></ellipse>
+                <ellipse id="Oval" transform="translate(200.500000, 104.000000) scale(1, -1) translate(-200.500000, -104.000000) " cx="200.5" cy="104" rx="200.5" ry="51"></ellipse>
+                <ellipse id="Oval" transform="translate(200.500000, 156.000000) scale(1, -1) translate(-200.500000, -156.000000) " cx="200.5" cy="156" rx="200.5" ry="51"></ellipse>
+                <ellipse id="Oval" transform="translate(200.500000, 209.000000) scale(1, -1) translate(-200.500000, -209.000000) " cx="200.5" cy="209" rx="200.5" ry="51"></ellipse>
+                <ellipse id="Oval" transform="translate(200.500000, 262.000000) scale(1, -1) translate(-200.500000, -262.000000) " cx="200.5" cy="262" rx="200.5" ry="51"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

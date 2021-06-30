@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title> LeanStore: A High-Performance Storage Engine for Modern Hardware </title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link href="images/favicon.png" rel="icon">
+
+<link rel="canonical" href="">
+        <meta name="author" content="Viktor Leis" />
+
+
+<meta property="og:site_name" content="DATABASES AND INFORMATION SYSTEMS"/>
+<!--     <meta property="og:type" content="article"/> -->
+<meta property="og:title" content="Databases and Information Systems Group at Friedrich Schiller University Jena"/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content=""/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+<!--     <link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" rel="stylesheet"> -->
+
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+      <link rel="stylesheet" href="/theme/css/leanstyle.css" type="text/css"/>
+
+
+</head>
+<body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<div class="leanstore jumbotron">
+  <div class="container">
+    <div class="hyperlogo">
+      <h1><img src="/images/leanstore.png" style="max-width:100%; max-height: 64px;  vertical-align: middle;"><span style="display: inline-block; color:#666; font-size:25px; vertical-align: bottom;">– A High-Performance Storage Engine for Modern Hardware</span></h1>
+    </div>
+    <p> </p>
+    <!--p>
+        <a type="button" href="#summary" class="btn btn-primary btn-lg">Learn more »</a>
+        </p-->
+    </div>
+</div>
+
+<div class="container">
+  <p> LeanStore is a high-performance OLTP storage engine optimized for many-core CPUs and NVMe SSDs. Our goal is to achieve performance comparable to in-memory systems when the data set fits into RAM, while being able to fully exploit the bandwidth of fast NVMe SSDs for large data sets. While LeanStore is currently a research prototype, we hope to make it usable in production in the future.
+  </p>
+</div>
+
+
+<div class="leanstore container">
+  <h2 id="highlights">
+    Highlights
+    <a href="https://github.com/leanstore/leanstore"><img src="/images/github.png" style="height: 28px;float: right;"></a>
+
+  </h2>
+    <div class="container">
+        <div class="col-md-8">
+            <h3 class="text-info">Support for Very Large Data Sets on Directly-Attached NVMe Arrays</h3>
+            <p> NVMe SSDs have become cheap (1 TB cost around 200 USD) and fast (achieving more than 2-7 GB/s bandwidth per device). Existing storage engines are not capable of exploiting such fast IO devices, in particular when multiple NVMe SSDs are combined in a single server. LeanStore has been designed from scratch for Directly-Attached NVMe Arrays to get the full performance from fast flash storage devices. </p>
+            <h3 class="text-info">High In-Memory Performance</h3>
+            <p> Using optimized index structures, LeanStore achieves very high in-memory performance and scalable synchronization techniques ensure that it scales very well on many-core CPUs. A lightweight buffer manager transparently keeps frequently-accessed data in RAM, while supporting arbitrarily-large data sets on SSD. </p>
+            <h3 class="text-info">Embeddable Open Source Library</h3>
+            <p> Similar to storage engines like RocksDB and WiredTiger, LeanStore can be embedded into applications by linking it as a library. It offers a C++ interface for basic data operations like point lookup, range lookup, insert, update, delete. Support for ACID transactions is currently under development. The <a href="https://github.com/leanstore/leanstore">source code</a> is available under MIT license.
+            </p>
+
+        </div>
+        <div class="col-md-4">
+            <a href="images/leanstore/in-memory.png" target="_blank"><img class="hidden-xs hidden-sm hidden-md img-responsive " src="images/leanstore/in-memory.png"></a>
+            <a href="images/leanstore/in-memory.png" target="_blank"> <img class="visible-xs visible-sm visible-md img-responsive" src="images/leanstore/in-memory.png"></a>
+            <a href="images/leanstore/out-of-memory.png" target="_blank"> <img class="hidden-xs hidden-sm hidden-md img-responsive pull-right" src="images/leanstore/out-of-memory.png"></a>
+            <a href="images/leanstore/out-of-memory.png" target="_blank"><img class="visible-xs visible-sm visible-md img-responsive" src="images/leanstore/out-of-memory.png"></a>
+        </div>
+    </div>
+<hr>
+<h2 id="team">Team</h2>
+      <a href="/team/leis.html" target="_blank">Prof. Viktor Leis</a>,
+      <a href="/team.html" target="_blank">Adnan Alhomssi</a>,
+      <a href="/team.html" target="_blank">Gabriel Haas</a>
+</p>
+<p>External Collaborators:
+    <a href="http://db.in.tum.de/people/sites/neumann" target="_blank">Prof. Thomas Neumann</a>,
+    <a href="http://db.in.tum.de/people/sites/kemper" target="_blank">Prof. Alfons Kemper</a>,
+    <a href="http://db.in.tum.de/people/sites/haubenschild" target="_blank">Michael Haubenschild</a>
+</p>
+
+
+<hr>
+<h2 id="publications">Publications</h2>
+<table class="table table-hover table-striped table-responsive">
+    <thead>
+    <tr>
+        <th class="col-md-1">Venue</th>
+        <th class="col-md-7">Publication</th>
+        <th class="col-md-1">Link</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="http://cidrdb.org/cidr2021/">CIDR 2021</a></td>
+        <td><strong>Contention and Space Management for B-Trees</strong><br>
+          Adnan Alhomssi, Viktor Leis
+        </td>
+        <td><a href="http://cidrdb.org/cidr2021/papers/cidr2021_paper21.pdf">pdf</a> - <a href="https://github.com/leanstore/leanstore/tree/cidr">code</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://sigmod2020.org/">SIGMOD 2020</a></td>
+        <td><strong>Rethinking Logging, Checkpoints, and Recovery for High-Performance Storage Engines</strong><br>
+          Michael Haubenschild, Caetano Sauer, Thomas Neumann, Viktor Leis
+        </td>
+        <td><a href="https://db.in.tum.de/~leis/papers/rethinkingLogging.pdf">pdf</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://cidrdb.org/cidr2020/index.html">CIDR 2020</a></td>
+        <td><strong>Exploiting Directly-Attached NVMe Arrays in DBMS</strong><br>
+          Gabriel Haas, Michael Haubenschild, Viktor Leis
+        </td>
+        <td><a href="http://cidrdb.org/cidr2020/papers/p16-haas-cidr20.pdf">pdf</a></td>
+      </tr>
+
+      <tr>
+        <td><a href="http://sites.computer.org/debull/bull_issues.html">IEEE Data Engineering Bulletin</a></td>
+        <td><strong>Optimistic Lock Coupling: A Scalable and Efficient General-Purpose Synchronization Method</strong><br>
+          Viktor Leis, Michael Haubenschild, Thomas Neumann
+        </td>
+        <td><a href="http://sites.computer.org/debull/A19mar/p73.pdf">pdf</a></td>
+      </tr>
+
+      <tr>
+        <td><a href="https://icde2018.org/">ICDE 2018</a></td>
+        <td><strong>LeanStore: In-Memory Data Management Beyond Main Memory</strong><br>
+          Viktor Leis, Michael Haubenschild, Alfons Kemper, Thomas Neumann
+        </td>
+        <td><a href="https://db.in.tum.de/~leis/papers/leanstore.pdf">pdf</a></td>
+      </tr>
+
+    </tbody>
+</table>
+<hr>
+<h2 id="presentations">Presentations</h2>
+<table class="table table-hover table-responsive table-striped">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Venue</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr> <td>April 2021</td> <td> <a href="https://hpi.de/veranstaltungen/hpi-veranstaltungen/2021/hpi-research-symposium-2021.html">HPI Research Symposium 2021</a> </td> </tr>
+      <tr> <td>April 2021</td> <td> <a href="https://db.cs.cmu.edu/events/vaccination-2021-leanstore-in-memory-data-management-beyond-main-memory-viktor-leis/">CMU Vaccination Database Seminar</a> </td> </tr>
+      <tr> <td>March 2021</td> <td> <a href="http://dsdsd.da.cwi.nl/leanstore/">Dutch Seminar on Data Systems Design</a> </td> </tr>
+      <tr> <td>July 2020</td> <td> CWI Database Architectures Group </td> </tr>
+      <tr> <td>January 2020</td> <td> <a href="https://www.maki.tu-darmstadt.de/vortraege_events/guest_talk/2020_3/prof___dr___viktor_leis_2020.de.jsp">TU Darmstadt</a> </td> </tr>
+      <tr> <td>January 2020</td> <td> <a href="http://cidrdb.org/cidr2020/program.html">CIDR</a> </td> </tr>
+      <tr> <td>November 2019</td> <td> <a href="https://www.cs6.tf.fau.de/informatik-kolloquium-2/">University of Erlangen–Nuremberg</a> </td> </tr>
+      <tr> <td>November 2019</td> <td> <a href="https://elite-se.informatik.uni-augsburg.de/guest-lecture-by-prof-viktor-leis-and-adnan-alhomssi/">University of Augsburg</a> </td> </tr>
+      <tr> <td>April 2018</td> <td> <a href="https://icde2018.org/index.php/program/research-track/long-papers/">ICDE</a> </td> </tr>
+      <tr> <td>April 2018</td> <td> Imperial College London </td> </tr>
+      <tr> <td>March 2018</td> <td> SAP HANA TechDays </td> </tr>
+      <tr> <td>August 2017</td> <td> FGDB Symposium </td> </tr>
+      <tr> <td>April 2017</td> <td> Columbia University </td> </tr>
+      <tr> <td>April 2017</td> <td> Harvard University </td> </tr>
+      <tr> <td>April 2017</td> <td> Massachusetts Institute of Technology </td> </tr>
+      <tr> <td>March 2017</td> <td> Carnegie Mellon University </td> </tr>
+    </tbody>
+</table>
+
+<h2 id="contact">Contact</h2>
+<p>Contact us (see <a href="#team">Team</a> for emails) if you are interested in a thesis, student job, or a Ph.D. position!
+</p>
+
+   <p></p>
+</div>
+<style>
+</style>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+<img src="/images/dbistonnegreen@1x.svg" width="38"/> DBIS            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true"> <i class="fa fa-book"></i> Courses <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/courses/ws20/db1/" >Datenbanksysteme I (WS20)</a></li>
+                        <li><a href="/courses/ws20/dbimpl/" >Datenbanksystemimplementierung (WS20)</a></li>
+                        <li><a href="/courses/ws20/seminar/" >Seminar: Datenbanksysteme (WS20)</a></li>
+                        <li><a href="/courses/ws20/advanced_topics/" >Datenbanksysteme Spezialisierung (WS20)</a></li>
+                        <li><a href="/courses/archive/" >Vergangene Semester</a></li>
+                        <li><a href="/courses/oberseminar/" >Forschung im Datenbankbereich</a></li>
+                    </ul>
+                </li>
+                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/leanstore.html"><img src="/images/leanstoretransparentwhite@0.5x.png" height="16" style="padding-bottom: 2px;" i></a></li>
+
+
+                <!--                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/leanstore.html"></a></li>
+-->
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+
+
+
+<!--
+
+    -->
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="well well-lg" id="footer-well">
+      <div class="container">
+      <div class="row">
+         <div class="col-xs-6">
+            <a href="https://www.uni-jena.de/" title="https://www.uni-jena.de/"><img src="/images/fsu/Bildmarke_black_8cm.png"></a>
+         </div>
+         <div class="col-xs-6">
+            <p class="pull-right">
+               <a href="/impressum.html" title="Impressum">Impressum</a>
+               <br>
+               <a href="/haftungsausschluss.html" title="Haftungsausschluss">Haftungsausschluss</a>
+            </p>
+        </div>
+      </div>
+   </div>
+   </div>
+</footer>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+<!-- Fix scrolling issues to internal HREFs that get positioned behind navbar -->
+<!-- http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header -->
+<script src="/theme/js/href_scroll.js"></script>
+
+
+</body>
+</html>

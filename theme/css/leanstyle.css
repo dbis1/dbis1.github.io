@@ -1,0 +1,41 @@
+.navbar-default {
+	background-color: #D2D2D2;
+	border-color: #D2D2D2;
+}
+.leanstore.jumbotron {
+	padding-top: 30px;
+	margin-bottom: 0px;
+	background-color: #ffffff;
+}
+.leanstore.container a, .leanstore.container a:hover {
+	color: #428bca !important;
+}
+.navbar {
+	background-color: #167b36;/*#1FA048;*/
+	border-color: #1FA048;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+	background-color: #1FA048;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #1FA048;
+}
+.navbar-default .navbar-collapse {
+    border-color: #1FA048;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+	background-color: #1FA048;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+/* navbar menu items hover / active */
+	background-color: #1FA048;
+}
+.text-info {
+	color: #167b36;
+}
+.text-info:hover {
+	color: #167b36;
+}
+.leanstore.container a, .leanstore.container a:hover {
+	color: #1f790f !important;
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Datenbanksysteme I - Databases and Information Systems Group at Friedrich Schiller University Jena</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link href="images/favicon.png" rel="icon">
+
+<link rel="canonical" href="/courses/ws20/db1/index">
+
+        <meta name="author" content="Viktor Leis" />
+        <meta name="description" content="Die Vorlesung vermittelt grundlegende Konzepte von Datenbanksystemen sowie das notwendige Wissen, um diese effektiv einsetzen zu können. Vorlesung 1 Thema Folien Video Einführung Datenbankentwurf Das relationale Modell SQL Grafische Datenanalyse Relationale Entwurfstheorie Physische Datenorganisation Transaktionen Anfragebearbeitung Zusammenfassung Sorry, diese Seite benötigt JavaScript. Übung Die Übungen finden online über BigBlueButton statt …" />
+
+    <meta property="og:site_name" content="DATABASES AND INFORMATION SYSTEMS" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Datenbanksysteme I - Databases and Information Systems Group at Friedrich Schiller University Jena"/>
+    <meta property="og:url" content="/courses/ws20/db1/index"/>
+    <meta property="article:published_time" content="2021-03-28" />
+    <meta property="og:description" content="Die Vorlesung vermittelt grundlegende Konzepte von Datenbanksystemen sowie das notwendige Wissen, um diese effektiv einsetzen zu können. Vorlesung 1 Thema Folien Video Einführung Datenbankentwurf Das relationale Modell SQL Grafische Datenanalyse Relationale Entwurfstheorie Physische Datenorganisation Transaktionen Anfragebearbeitung Zusammenfassung Sorry, diese Seite benötigt JavaScript. Übung Die Übungen finden online über BigBlueButton statt …" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+<!--     <link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" rel="stylesheet"> -->
+
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+<img src="/images/dbistonne@1x.svg" width="38"/> DBIS            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true"> <i class="fa fa-book"></i> Courses <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/courses/ws20/db1/" >Datenbanksysteme I (WS20)</a></li>
+                        <li><a href="/courses/ws20/dbimpl/" >Datenbanksystemimplementierung (WS20)</a></li>
+                        <li><a href="/courses/ws20/seminar/" >Seminar: Datenbanksysteme (WS20)</a></li>
+                        <li><a href="/courses/ws20/advanced_topics/" >Datenbanksysteme Spezialisierung (WS20)</a></li>
+                        <li><a href="/courses/archive/" >Vergangene Semester</a></li>
+                        <li><a href="/courses/oberseminar/" >Forschung im Datenbankbereich</a></li>
+                    </ul>
+                </li>
+                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/leanstore.html"><img src="/images/leanstoretransparentwhite@0.5x.png" height="16" style="padding-bottom: 2px;" i></a></li>
+
+
+                <!--                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/leanstore.html"></a></li>
+-->
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+
+
+
+    <section id="content" class="body">
+        <h1 class="entry-title">Datenbanksysteme I</h1>
+<!--         <footer class="post-info"> -->
+            <span class="published" style="float: right;">
+            <i class="fa fa-calendar"></i><time datetime="2021-03-28 14:50:03.631809+02:00"> <B>Last Updated:</B> Mär 28, 2021</time>
+            </span>
+<!--         </footer> -->
+        
+        <div class="entry-content">
+            <div class="row">
+  <div class="col-lg-12">
+
+    <section id="content" class="body">
+      <p>
+        <section class="well well-sm course-info mt-5">
+          Die Vorlesung vermittelt grundlegende Konzepte von Datenbanksystemen sowie das notwendige Wissen, um diese effektiv einsetzen zu können.
+        </section>
+      </p>
+
+      <div class="entry-content">
+        <!-- START PRIMARY -->
+
+        <!-- END PRIMARY -->
+
+        <h2>Vorlesung 1</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Thema</th>
+              <th>Folien</th>
+              <th>Video</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-publish='2020-11-02' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td> <b>Einführung</b> </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ws20/db1/intro.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a>
+              <td class="text-left"><a class="schedule-badge" href="https://cloud.uni-jena.de/s/yikMNjQfbdGT5SJ/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+            </tr>
+
+            <tr data-publish='2020-11-09' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td> <b>Datenbankentwurf</b> </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ws20/db1/design.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a>
+              <td class="text-left"><a class="schedule-badge" href="https://cloud.uni-jena.de/s/z4WbSxgqoziXEqo/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+            </tr>
+
+            <tr data-publish='2020-11-16' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td> <b>Das relationale Modell</b> </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ws20/db1/relational.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a>
+              <td class="text-left"><a class="schedule-badge" href="https://cloud.uni-jena.de/s/D4qePk6oje4R2pn/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+            </tr>
+
+            <tr data-publish='2020-11-23' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td> <b>SQL</b> </td>
+              <td class="text-left"> <a class="schedule-badge" href="/courses/ws20/db1/sql.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a> </td>
+              <td class="text-left">
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/iCQ4pGremCySbeD/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a data-publish='2020-11-30' style="display: none;" class="schedule-badge" href="https://cloud.uni-jena.de/s/nNZCq6BMLFGq9om/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a data-publish='2020-12-07' style="display: none;" class="schedule-badge" href="https://cloud.uni-jena.de/s/ADcrNXcETGxnq7B/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+              </td>
+            </tr>
+
+            <tr class="">
+              <td>
+                <b>Grafische Datenanalyse</b>
+              </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ws20/db1/ggplot.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a>
+              <td class="text-left">
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/9JQFJKTPkzngHP9/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+              </td>
+            </tr>
+
+            <tr data-publish='2020-12-14' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <!-- Weihnachtsvorleusng -->
+            </tr>
+
+            <tr data-publish='2021-01-04' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td> <b>Relationale Entwurfstheorie</b> </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ws20/db1/reldesign.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left"><a class="schedule-badge" href="https://cloud.uni-jena.de/s/TdY97nkWLJHLWCM/download"><i class="fa fa-file-video-o fa-lg"></i></a></td>
+            </tr>
+
+            <tr data-publish='2021-01-11' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td> <b>Physische Datenorganisation</b> </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ws20/db1/phys.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left"><a class="schedule-badge" href="https://cloud.uni-jena.de/s/LXHsQ46iAjdEF6G/download"><i class="fa fa-file-video-o fa-lg"></i></a></td>
+            </tr>
+
+            <tr data-publish='2021-01-18' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td> <b>Transaktionen</b> </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ws20/db1/tx.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left"><a class="schedule-badge" href="https://cloud.uni-jena.de/s/wfNSHPote9BJffk/download"><i class="fa fa-file-video-o fa-lg"></i></a></td>
+            </tr>
+
+            <tr data-publish='2021-01-25' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td> <b>Anfragebearbeitung</b> </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ws20/db1/qp.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left">
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/T8WomESeQ8zrqbQ/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a data-publish='2021-02-01' style="display: none;" class="schedule-badge" href="https://cloud.uni-jena.de/s/3wS3gMoJtEtfPsZ/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+              </td>
+            </tr>
+
+            <tr data-publish='2021-02-08' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td> <b>Zusammenfassung</b> </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ws20/db1/end.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left">
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+        <noscript><div style='color: red'>Sorry, diese Seite benötigt JavaScript.</div></noscript>
+
+        <h2>Übung</h2>
+
+        Die Übungen finden online über <a href='https://moodle.uni-jena.de/mod/url/view.php?id=244788'>BigBlueButton</a> statt.<br/>
+        Es stehen zwei Termine zur Auswahl: Mittwoch 12:30 Uhr s.t. oder Donnerstag 16:00 Uhr s.t.<br/>
+        <b>Übungsbeginn</b> ist ab der zweiten Vorlesungswoche. Der erste Termin ist am Mittwoch 11.11.20 bzw. am Donnerstag 12.11.20.  
+
+        <div></div>
+        Abgabe immer Dienstag 23:59 Uhr. Die Lösungen werden auf Moodle veröffentlicht. 
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Blatt Nr.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-publish='2020-11-02' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 1 [<a href="/courses/ws20/db1/Blatt01.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2020-11-09' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 2 [<a href="/courses/ws20/db1/Blatt02.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2020-11-16' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 3 [<a href="/courses/ws20/db1/Blatt03.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2020-11-23' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 4 [<a href="/courses/ws20/db1/Blatt04.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2020-11-30' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 5 [<a href="/courses/ws20/db1/Blatt05.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2020-12-07' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 6 [<a href="/courses/ws20/db1/Blatt06.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2020-12-14' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 7 [<a href="/courses/ws20/db1/Blatt07.pdf">pdf</a>] Datensatz [<a href="/courses/ws20/db1/Hausaufgabe07.zip">zip</a>]
+            </tr>
+            <tr data-publish='2021-01-04' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 8 [<a href="/courses/ws20/db1/Blatt08.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2021-01-11' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 9 [<a href="/courses/ws20/db1/Blatt09.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2021-01-18' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 10 [<a href="/courses/ws20/db1/Blatt10.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2021-01-25' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 11 [<a href="/courses/ws20/db1/Blatt11.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2021-02-01' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+              <td class="text-left">Blatt 12 [<a href="/courses/ws20/db1/Blatt12.pdf">pdf</a>]
+            </tr>
+            <tr data-publish='2021-02-08' style="display: none;" class="">
+              <!--- Noch nicht veröffentlichte Vorlesungen/Übungen können sich kurzfristig noch ändern! --->
+            </tr>
+          </tbody>
+        </table> 
+        <noscript><div style='color: red'>Sorry, diese Seite benötigt JavaScript.</div></noscript>
+
+        <section class="">
+          <h2>Zusatzmaterial</h2>
+          <p>
+          <ul>
+            <li>Uni-Schema: <a href="/courses/ws20/db1/unischema.pdf">ER-Diagramm</a> und <a href="/courses/ws20/db1/uni.png">Beispielausprägung</a> </li>
+            <li>Relational Algebra Calculator der Uni Innsbruck: <a href="https://dbis-uibk.github.io/relax/calc/local/uibk/local/1">RelaX</a> mit Kemper Datensatz</li>
+            <li>SQL-Webschnittstelle: <a href="https://hyper-db.com/interface.html">HyPer</a></li>
+            <li>SQL-Imports: <a href="/courses/ws20/db1/uni_mysql5.sql">Uni-Schema</a> und <a href="/courses/ws20/db1/sql_zehnkampf_disziplin.sql">Zehnkampf</a></li>
+            <li>SQL-Puzzle: <a href="https://mystery.knightlab.com/">SQL Murder Mystery</a></li>
+          </ul>
+          </p>
+      </section>
+
+        <div class="entry-content">
+          <p>Der Foliensatz und die Übungen basiert auf Unterlagen von Prof. Alfons Kemper und Prof. Thomas Neumann (TU München).</p>
+          <p></p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+Array.prototype.slice.call(document.querySelectorAll('[data-publish]')).map(el=>{if(new Date(el.getAttribute('data-publish'))<new Date()){el.style.display='';el.removeAttribute('data-publish')}else{el.parentNode.removeChild(el)}});document.currentScript.parentNode.removeChild(document.currentScript);<!--;D-->
+</script>
+        </div>
+    </section>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="well well-lg" id="footer-well">
+      <div class="container">
+      <div class="row">
+         <div class="col-xs-6">
+            <a href="https://www.uni-jena.de/" title="https://www.uni-jena.de/"><img src="/images/fsu/Bildmarke_black_8cm.png"></a>
+         </div>
+         <div class="col-xs-6">
+            <p class="pull-right">
+               <a href="/impressum.html" title="Impressum">Impressum</a>
+               <br>
+               <a href="/haftungsausschluss.html" title="Haftungsausschluss">Haftungsausschluss</a>
+            </p>
+        </div>
+      </div>
+   </div>
+   </div>
+</footer>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+<!-- Fix scrolling issues to internal HREFs that get positioned behind navbar -->
+<!-- http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header -->
+<script src="/theme/js/href_scroll.js"></script>
+
+
+</body>
+</html>

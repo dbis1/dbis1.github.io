@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Datenbanksysteme II - Databases and Information Systems Group at Friedrich Schiller University Jena</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link href="images/favicon.png" rel="icon">
+
+<link rel="canonical" href="/courses/ss20/db2/index">
+
+        <meta name="author" content="Viktor Leis" />
+        <meta name="description" content="Die Vorlesung schließt nahtlos an die Veranstaltung Datenbanksysteme I an und vermittelt weitergehende Konzepte wie fortgeschrittenes SQL, Transaktionsverwaltung, Mehrbenutzersynchronisation, Anfrageoptimierung und verteilte Datenbanken. Vorlesung Thema Folien Video Transaktionsverwaltung SQL Anfrageoptimierung Verteilte Datenbanken Cloud Spezielle Datenstrukturen Übung Die Übung/Fragestunde findet ab dem 12.05. immer dienstags um 14:15 über …" />
+
+    <meta property="og:site_name" content="DATABASES AND INFORMATION SYSTEMS" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Datenbanksysteme II - Databases and Information Systems Group at Friedrich Schiller University Jena"/>
+    <meta property="og:url" content="/courses/ss20/db2/index"/>
+    <meta property="article:published_time" content="2021-03-28" />
+    <meta property="og:description" content="Die Vorlesung schließt nahtlos an die Veranstaltung Datenbanksysteme I an und vermittelt weitergehende Konzepte wie fortgeschrittenes SQL, Transaktionsverwaltung, Mehrbenutzersynchronisation, Anfrageoptimierung und verteilte Datenbanken. Vorlesung Thema Folien Video Transaktionsverwaltung SQL Anfrageoptimierung Verteilte Datenbanken Cloud Spezielle Datenstrukturen Übung Die Übung/Fragestunde findet ab dem 12.05. immer dienstags um 14:15 über …" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+<!--     <link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" rel="stylesheet"> -->
+
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+<img src="/images/dbistonne@1x.svg" width="38"/> DBIS            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true"> <i class="fa fa-book"></i> Courses <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/courses/ws20/db1/" >Datenbanksysteme I (WS20)</a></li>
+                        <li><a href="/courses/ws20/dbimpl/" >Datenbanksystemimplementierung (WS20)</a></li>
+                        <li><a href="/courses/ws20/seminar/" >Seminar: Datenbanksysteme (WS20)</a></li>
+                        <li><a href="/courses/ws20/advanced_topics/" >Datenbanksysteme Spezialisierung (WS20)</a></li>
+                        <li><a href="/courses/archive/" >Vergangene Semester</a></li>
+                        <li><a href="/courses/oberseminar/" >Forschung im Datenbankbereich</a></li>
+                    </ul>
+                </li>
+                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/leanstore.html"><img src="/images/leanstoretransparentwhite@0.5x.png" height="16" style="padding-bottom: 2px;" i></a></li>
+
+
+                <!--                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/leanstore.html"></a></li>
+-->
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+
+
+
+    <section id="content" class="body">
+        <h1 class="entry-title">Datenbanksysteme II</h1>
+<!--         <footer class="post-info"> -->
+            <span class="published" style="float: right;">
+            <i class="fa fa-calendar"></i><time datetime="2021-03-28 14:50:03.551809+02:00"> <B>Last Updated:</B> Mär 28, 2021</time>
+            </span>
+<!--         </footer> -->
+        
+        <div class="entry-content">
+            <div class="row">
+  <div class="col-lg-12">
+
+    <section id="content" class="body">
+      <p>
+        <section class="well well-sm course-info mt-5">
+          Die Vorlesung schließt nahtlos an die Veranstaltung Datenbanksysteme I an und vermittelt weitergehende Konzepte wie fortgeschrittenes SQL, Transaktionsverwaltung, Mehrbenutzersynchronisation, Anfrageoptimierung und verteilte Datenbanken.
+        </section>
+      </p>
+
+      <div class="entry-content">
+        <!-- START PRIMARY -->
+
+        <!-- END PRIMARY -->
+
+        <h2>Vorlesung</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Thema</th>
+              <th>Folien</th>
+              <th>Video</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="">
+              <td>
+                <b>Transaktionsverwaltung</b>
+              </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ss20/db2/transactions.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left">
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/FFfWXcPEmYPS3Eo/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/CAfif7qNaHp5xbH/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/DC7pD4JzPx4XFXr/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/XAecGLf8YmxH4Bo/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/JMzJFjCAK96rW9D/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/JFaNwEYPrBAJX93/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/ZnczWM379Sd4T7a/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+              </td>
+            </tr>
+
+            <tr class="">
+              <td>
+                <b>SQL</b>
+              </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ss20/db2/sql.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left">
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/g9AGEFfp5367ni2/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/99nCmNc3EzsZdwa/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/sa3QMsG37EmDJf6/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/F5p7ScbHfwF8bbd/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+              </td>
+            </tr>
+
+            <tr class="">
+              <td>
+                <b>Anfrageoptimierung</b>
+              </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ss20/db2/qo.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left">
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/inKKcLBCAbgyoDm/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/q7QcaD3zyx2KfPt/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+              </td>
+            </tr>
+
+            <tr class="">
+              <td>
+                <b>Verteilte Datenbanken</b>
+              </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ss20/db2/dist.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left">
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/4fMZ64DcsxPyYyL/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/7HiAoXpAk3rLn7x/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+              </td>
+            </tr>
+
+            <tr class="">
+              <td>
+                <b>Cloud</b>
+              </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ss20/db2/cloud.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left">
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/kpAK3CGpCQjQ3R9/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+              </td>
+            </tr>
+
+            <tr class="">
+              <td>
+                <b>Spezielle Datenstrukturen</b>
+              </td>
+              <td class="text-left"><a class="schedule-badge" href="/courses/ss20/db2/ds.pdf"><i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+              <td class="text-left">
+                <a class="schedule-badge" href="https://cloud.uni-jena.de/s/NQLP8wT5wJ4EHbD/download"><i class="fa fa-file-video-o fa-lg"></i></a>
+              </td>
+            </tr>
+
+          </tbody>
+        </table> 
+
+        <h2>Übung</h2>
+        Die Übung/Fragestunde findet ab dem 12.05. immer dienstags um 14:15 über <a href="https://moodle.uni-jena.de/mod/url/view.php?id=181974">BBB</a> statt. 
+
+        <h4>Bonus</h4>
+        Für die Bearbeitung der Aufgabenblätter gibt es einen Notenbonus einer Notenstufe (e.g. 0,3). 
+        <ul>
+        <li>Für jedes Übungsblatt wir dabei ein Bonuspunkt vergeben.</li>
+        <li>Den Notenbonus erhält wer mindestens 75% der Punkte (8 von voraussichtlich 11) erzielt.</li>
+        <li>Bei der Vergabe der Punkte zählt nicht die vollständige Korrektheit aller Aufgaben, sondern entscheidend ist, dass man sich mit dem Stoff der Vorlesung erkenntlich beschäftigt hat.</li>
+        <li>Der Notenbonus kann nur bei bestandener Prüfung auf Noten zwischen 1,3 und 4,0 vergeben werden.</li>
+        <li>Die Abgabe erfolgt über <a href="https://moodle.uni-jena.de/">moodle</a>.</li>
+        </ul>
+        <div></div>
+        Abgabe immer Dienstag 10:00 Uhr Vormittag. Die Lösungen werden auf Moodle veröffentlicht.
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Blatt Nr.</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="">
+              <td class="text-left">Blatt 1 [<a href="/courses/ss20/db2/Blatt01.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 2 [<a href="/courses/ss20/db2/Blatt02.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 3 [<a href="/courses/ss20/db2/Blatt03.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 4 [<a href="/courses/ss20/db2/Blatt04.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 5 [<a href="/courses/ss20/db2/Blatt05.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 6 [<a href="/courses/ss20/db2/Blatt06.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 7 [<a href="/courses/ss20/db2/Blatt07.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 8 [<a href="/courses/ss20/db2/Blatt08.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 9 [<a href="/courses/ss20/db2/Blatt09.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 10 [<a href="/courses/ss20/db2/Blatt10.pdf">pdf</a>]
+            </tr>
+            <tr class="">
+              <td class="text-left">Blatt 11 [<a href="/courses/ss20/db2/Blatt11.pdf">pdf</a>]
+            </tr>
+
+          </tbody>
+        </table> 
+
+        <section class="">
+          <h2>Zusatzmaterial</h2>
+          <p>
+          <ul>
+            <li>Uni-Schema: <a href="/courses/ss20/db2/unischema.pdf">ER-Diagramm</a> und <a href="/courses/ss20/db2/uni.png">Beispielausprägung</a> </li>
+            <li>Relational Algebra Calculator: <a href="https://dbis-uibk.github.io/relax/calc.htm#">RelaX</a></li>
+            <li>SQL-Webschnittstelle: <a href="https://hyper-db.com/interface.html">HyPer</a></li>
+            <li>SQL-Imports: <a href="/courses/ss20/db2/uni_mysql5.sql">Uni-Schema</a> und <a href="/courses/ss20/db2/sql_zehnkampf_disziplin.sql">Zehnkampf</a></li>
+            <li>SQL-Puzzle: <a href="https://mystery.knightlab.com/">SQL Murder Mystery</a></li>
+          </ul>
+          </p>
+      </section>
+        <div class="entry-content">
+          <p>Der Foliensatz und die Übungen basiert auf Unterlagen von Prof. Alfons Kemper und Prof. Thomas Neumann (TU München).</p>
+          <p></p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+        </div>
+    </section>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="well well-lg" id="footer-well">
+      <div class="container">
+      <div class="row">
+         <div class="col-xs-6">
+            <a href="https://www.uni-jena.de/" title="https://www.uni-jena.de/"><img src="/images/fsu/Bildmarke_black_8cm.png"></a>
+         </div>
+         <div class="col-xs-6">
+            <p class="pull-right">
+               <a href="/impressum.html" title="Impressum">Impressum</a>
+               <br>
+               <a href="/haftungsausschluss.html" title="Haftungsausschluss">Haftungsausschluss</a>
+            </p>
+        </div>
+      </div>
+   </div>
+   </div>
+</footer>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+<!-- Fix scrolling issues to internal HREFs that get positioned behind navbar -->
+<!-- http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header -->
+<script src="/theme/js/href_scroll.js"></script>
+
+
+</body>
+</html>

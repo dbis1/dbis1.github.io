@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2115px" height="344px" viewBox="0 0 2115 344" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>leanstore@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="47.3201436%" y1="0%" x2="51.5184%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#18AB59" offset="0%"></stop>
+            <stop stop-color="#65C7C6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#1D0086" offset="0%"></stop>
+            <stop stop-color="#009D9E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="leanstore" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text font-family="STHeitiSC-Light, Heiti SC" font-size="400" font-weight="300" letter-spacing="-10.1196667">
+            <tspan x="415.677" y="344" fill="#08A150">leanstore</tspan>
+            <tspan x="2115" y="344" fill="#1EAD61"></tspan>
+        </text>
+        <g id="colibrirgreen" transform="translate(186.500000, 174.500000) scale(-1, 1) translate(-186.500000, -174.500000) translate(0.000000, 21.000000)">
+            <g id="colibri">
+                <path d="M0,16.4714612 L76.7619207,27.0288584 C103.248276,21.0804583 120.106244,24.3434254 127.335825,36.8177597 C133.316985,47.1379946 134.019358,56.3769711 139.318495,75.4607414 C143.388804,90.1191393 165.110629,132.003898 187.587998,173.345352 C194.373919,185.826343 201.228704,198.257814 207.687437,209.875649 C226.255664,243.27579 246.372757,275.650574 268.038716,307 C192.98232,259.588794 148.309201,227.21401 134.019358,209.875649 C122.983233,196.485136 109.023748,174.623736 101.718882,153.5 C97.1302752,140.230964 88.0462001,102.565883 74.4666569,40.5047562 L0,16.4714612 Z" id="Path" fill="url(#linearGradient-1)"></path>
+                <polygon id="Path-2" fill="url(#linearGradient-2)" points="267.348161 30.1049018 372.897766 -7.968461e-14 186.781326 172.293982 120.458924 122.884274"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
